@@ -20,11 +20,12 @@ function MessagesScreen(props) {
             image: require('../assets/cric_logo.png')
         },
     ]
-
-    const [messages, SetMessages] = useState(initialMessages);
+    const [messages, setMessages] = useState(initialMessages);
+    const [refreshing, setRefreshing] = useState(false);
     const handleDelete = (message) => {
-        SetMessages(messages.filter((m) => m.id !== message.id))
+        setMessages(messages.filter((m) => m.id !== message.id))
     }
+
 
     return (
         <Screen>
@@ -42,6 +43,17 @@ function MessagesScreen(props) {
                 />
                 }
                 ItemSeparatorComponent={ListItemSeparator}
+                refreshing={refreshing}
+                onRefresh={ () => {
+                    setMessages([
+                        {
+                            id: 2,
+                            title: 'me',
+                            description: 'i am the champ',
+                            image: require('../assets/cric_logo.png')
+                        },
+                    ])
+                }}
             />
         </Screen>
 
