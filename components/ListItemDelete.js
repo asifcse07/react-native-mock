@@ -1,0 +1,28 @@
+import React from 'react';
+import {View, StyleSheet} from 'react-native';
+import color from '../config/color';
+import {Icon } from 'react-native-elements';
+
+function ListItemDelete(props) {
+    return (
+        <View style={styles.container}>
+            <Icon
+                name='trash-can'
+                type='material-community'
+                color={color.white}
+                size={35}
+            />
+        </View>
+    );
+}
+
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: color.danger,
+        width: 70,
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
+});
+
+export default ListItemDelete;
