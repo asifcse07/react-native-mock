@@ -31,26 +31,28 @@ import MessagesScreen from './screens/MessagesScreen';
 import Icons from './components/Icons';
 import Screen from './components/Screen';
 import ListItem from './components/ListItem';
+import AccountScreen from './screens/AccountScreen';
 
 export default function App() {
   const pressHandler = () => console.log('s');
   return (
+      <AccountScreen/>
     // <WelcomeScreen/>
     // <ViewImageScreen />
     // <ListingViewScreen/>
     //   <MessagesScreen/>
-      <Screen>
-        <ListItem
-            title={'my title'}
-            ImageComponent={<Icons name={'email'}/>}
-        />
-        {/*<Icons*/}
-        {/*    name={'email'}*/}
-        {/*    size={100}*/}
-        {/*    backgroundColor={'red'}*/}
-        {/*    iconColor={'white'}*/}
-        {/*/>*/}
-      </Screen>
+    //   <Screen>
+    //     <ListItem
+    //         title={'my title'}
+    //         ImageComponent={<Icons name={'email'}/>}
+    //     />
+    //     <Icons
+    //         name={'email'}
+    //         size={100}
+    //         backgroundColor={'red'}
+    //         iconColor={'white'}
+    //     />
+    //   </Screen>
 
   );
 }
