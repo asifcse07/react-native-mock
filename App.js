@@ -14,7 +14,7 @@ import {
   View,
   Text,
   StatusBar,
-  Image,
+  Image, ImageComponent,
 } from 'react-native';
 
 import {
@@ -28,6 +28,9 @@ import WelcomeScreen from './screens/WelcomeScreen';
 import ViewImageScreen from './screens/ViewImageScreen';
 import ListingViewScreen from './screens/ListingViewScreen';
 import MessagesScreen from './screens/MessagesScreen';
+import Icons from './components/Icons';
+import Screen from './components/Screen';
+import ListItem from './components/ListItem';
 
 export default function App() {
   const pressHandler = () => console.log('s');
@@ -35,7 +38,20 @@ export default function App() {
     // <WelcomeScreen/>
     // <ViewImageScreen />
     // <ListingViewScreen/>
-      <MessagesScreen/>
+    //   <MessagesScreen/>
+      <Screen>
+        <ListItem
+            title={'my title'}
+            ImageComponent={<Icons name={'email'}/>}
+        />
+        {/*<Icons*/}
+        {/*    name={'email'}*/}
+        {/*    size={100}*/}
+        {/*    backgroundColor={'red'}*/}
+        {/*    iconColor={'white'}*/}
+        {/*/>*/}
+      </Screen>
+
   );
 }
 
