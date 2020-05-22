@@ -32,11 +32,17 @@ import Icons from './components/Icons';
 import Screen from './components/Screen';
 import ListItem from './components/ListItem';
 import AccountScreen from './screens/AccountScreen';
+import AppTextInput from './components/AppTextInput';
+import LoginScreen from './screens/LoginScreen';
 
 export default function App() {
   const pressHandler = () => console.log('s');
   return (
-      <AccountScreen/>
+      <LoginScreen/>
+      // <Screen>
+      //   <AppTextInput placeholder="Username" icon="email" />
+      // </Screen>
+      // <AccountScreen/>
     // <WelcomeScreen/>
     // <ViewImageScreen />
     // <ListingViewScreen/>
